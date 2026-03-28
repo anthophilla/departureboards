@@ -1,0 +1,1 @@
+This is just a quick project i made for my school that will display the departure times and other data of bus/tram stops in Szczecin Poland using the ZDiTM api(it should be realy easy to change the api to yours).
