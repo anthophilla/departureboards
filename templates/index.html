@@ -2,8 +2,10 @@
 <html lang="pl">
     <head>
         <title>timetable</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     </head>
     <body>
+        <div id="clock"></div>
         <div id="board">loading...</div>
         <script src="{{ url_for('static', filename='stops.js') }}"></script>
     </body>

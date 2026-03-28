@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  background: #0b0f14;
+  color: #e8f1f2;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+/* container */
+#board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 columns */
+  gap: 30px;
+
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* stop block */
+.stop {
+  background: rgba(255,255,255,0.03);
+  padding: 15px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* stop title */
+.stop-name {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+/* each departure row */
+.line {
+  display: grid;
+  grid-template-columns: 40px 1fr 60px;
+
+  font-size: 30px;
+  padding: 4px 0;
+}
+
+/* destination */
+.destination {
+  opacity: 0.9;
+}
+
+/* time */
+.time {
+  text-align: right;
+  font-weight: 700;
+  font-size: 24px;
+}

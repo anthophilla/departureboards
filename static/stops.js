@@ -27,11 +27,15 @@ async function renderStops(stops) {
             timetable.className = "timetable"
 
             for (const dep of stop.departures) {
-                const line = document.createElement("h2");
-                line.className = "line";
-                line.innerHTML = `<em>${dep.line} ${dep.direction}</em>: ${dep.time}`;
+                const line_cointaner = document.createElement("h2");
+                line_cointaner.className = "line_cointaner";
+                line_cointaner.innerHTML = `
+                    <span class="line">${dep.line}</span>
+                    <span class="destination">${dep.direction}</span>
+                    <span class="time">${dep.time}</span>
+                `;
                 
-                timetable.appendChild(line);
+                timetable.appendChild(line_cointaner);
             }
             el.appendChild(timetable)
         }
