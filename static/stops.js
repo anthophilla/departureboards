@@ -21,6 +21,7 @@ async function renderStops(stops) {
             name.className = "stop_name";
             name.innerHTML = stop.name;
             el.appendChild(name);
+            el.appendChild(document.createElement("hr"))
         }
         {
             const timetable = document.createElement("div");

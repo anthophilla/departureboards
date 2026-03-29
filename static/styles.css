@@ -9,12 +9,22 @@ body {
 /* container */
 #board {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 columns */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   gap: 30px;
 
   height: 100vh;
   padding: 20px;
   box-sizing: border-box;
+  white-space: nowrap;
+}
+
+/* TODO add class */
+hr {
+  align-self: center;
+  width: 95%;
+  border: 0.4vh solid white;
+  border-radius: 5px;
 }
 
 /* stop block */
@@ -28,8 +38,8 @@ body {
 }
 
 /* stop title */
-.stop-name {
-  font-size: 1.2vw;
+.stop_name {
+  font-size: 2.2vw;
   font-weight: 700;
   margin-bottom: 12px;
   color: #ffffff;
@@ -38,19 +48,19 @@ body {
 /* each departure row */
 .line {
   font-weight: 500;
-  font-size: 1.0vw;
+  font-size: 1.8vw;
   padding: 4px 0;
 }
 
 /* destination */
 .destination {
   opacity: 0.9;
-  font-size: 0.8vw
+  font-size: 1.0vw
 }
 
 /* time */
 .time {
-  text-align: right;
+  align-self: right;
   font-weight: 600;
-  font-size: 1.1vw;
+  font-size: 1.8vw;
 }
