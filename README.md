@@ -29,3 +29,6 @@ and to add a stop just paste an id inside like this `, 10434`
 
 the zditm stop ids can be found [here](https://www.zditm.szczecin.pl/en/passenger/timetables/map-of-stops-and-vehicles)
 <img width="955" height="602" alt="departures" src="https://github.com/user-attachments/assets/ec23a0c5-13ae-48fc-92c9-6cce3f480293" />
+
+# Styling
+all styling is cointained in `static/styles.css` and the skeleton for use as reference is `skeleton.html`

@@ -27,7 +27,7 @@ async function renderStops(stops) {
             timetable.className = "timetable"
 
             for (const dep of stop.departures) {
-                const line_cointaner = document.createElement("h2");
+                const line_cointaner = document.createElement("div");
                 line_cointaner.className = "line_cointaner";
                 line_cointaner.innerHTML = `
                     <span class="line">${dep.line}</span>
