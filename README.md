@@ -6,6 +6,9 @@ This is just a quick project i made for my school that will display the departur
 make sure you have all the dependencies installed `python pip uv`
 > arch linux:
 >> `sudo pacman -S uv`
+> Ubuntu/Debian
+> install [uv](https://github.com/astral-sh/uv) using their standalone installer:
+>> `wget -qO- https://astral.sh/uv/install.sh | sh`
 
 clone the repo
 >
@@ -13,9 +16,10 @@ clone the repo
 >
 >``cd departureboards``
 
-install the pip dependencies
+create venv and install the pip dependencies
 > using uv:
 >>
+>> `uv venv`
 >> `uv pip install flask requests`
 
 finally run the server
@@ -32,3 +36,13 @@ the zditm stop ids can be found [here](https://www.zditm.szczecin.pl/en/passenge
 
 # Styling
 all styling is cointained in `static/styles.css` and the skeleton for use as reference is `skeleton.html`
+
+# Use with fullpage-os
+! Experimental !
+1. connect to your device with ssh (this setup was made in mind that the user is pi if the username is different you will need to adjust `departureboards.service` aswell as other steps in this section)
+2. use instructions for ubuntu in section *How to run* to install but **dont run the server**.
+3. copy the unit file `sudo cp departureboards.service /etc/systemd/system/departureboards.service`
+4. refresh systemctl `sudo systemctl daemon-reexec && sudo systemctl daemon-reload`
+5. enable the service `sudo systemctl enable busboard`
+6. change the url in `/boot/firmware/fullpageos.txt`
+7. reboot the device!

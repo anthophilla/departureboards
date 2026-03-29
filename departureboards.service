@@ -1,0 +1,13 @@
+[Unit]
+Description=Departure Board flask app
+After=network.target
+Wants=network-online.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/departureboards
+ExecStart=/home/pi/departureboards/.venv/bin/flask --app main run
+Restart=always
+
+[Install]
+WantedBy=multiuser.target
