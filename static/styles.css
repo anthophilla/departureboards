@@ -29,7 +29,7 @@ body {
 
 /* stop title */
 .stop-name {
-  font-size: 36px;
+  font-size: 1.2vw;
   font-weight: 700;
   margin-bottom: 12px;
   color: #ffffff;
@@ -37,21 +37,20 @@ body {
 
 /* each departure row */
 .line {
-  display: grid;
-  grid-template-columns: 40px 1fr 60px;
-
-  font-size: 30px;
+  font-weight: 500;
+  font-size: 1.0vw;
   padding: 4px 0;
 }
 
 /* destination */
 .destination {
   opacity: 0.9;
+  font-size: 0.8vw
 }
 
 /* time */
 .time {
   text-align: right;
-  font-weight: 700;
-  font-size: 24px;
+  font-weight: 600;
+  font-size: 1.1vw;
 }
