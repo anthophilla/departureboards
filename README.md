@@ -7,8 +7,8 @@ make sure you have all the dependencies installed `python pip uv`
 > arch linux:
 >> `sudo pacman -S uv`
 >
-> Ubuntu/Debian
-> install [uv](https://github.com/astral-sh/uv) using their standalone installer:
+> Ubuntu/Debian:
+>> install [uv](https://github.com/astral-sh/uv) using their standalone installer:
 >> `wget -qO- https://astral.sh/uv/install.sh | sh`
 
 clone the repo
