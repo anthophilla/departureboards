@@ -6,6 +6,7 @@ This is just a quick project i made for my school that will display the departur
 make sure you have all the dependencies installed `python pip uv`
 > arch linux:
 >> `sudo pacman -S uv`
+>
 > Ubuntu/Debian
 > install [uv](https://github.com/astral-sh/uv) using their standalone installer:
 >> `wget -qO- https://astral.sh/uv/install.sh | sh`
