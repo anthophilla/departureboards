@@ -5,8 +5,12 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     </head>
     <body>
-        <div id="clock"></div>
         <div id="board">loading...</div>
+        <div id="info_bar">
+            <span id="weather"></span>
+            <span id="clock">21:37</span>
+        </div>
         <script src="{{ url_for('static', filename='stops.js') }}"></script>
+        <script src="{{ url_for('static', filename='infobar.js') }}"></script>
     </body>
 </html>

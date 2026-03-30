@@ -7,6 +7,11 @@ def format_seconds(seconds: int):
     else:
         return f"{seconds//60}min"
 
+#the direction can sometimes be too long and it will mess up the text rendering
+def fix_direction(direction: str):
+    if len(direction) > 20: return direction[:18]+"..."
+    else: return direction
+
 def get_stop_data(id: int):
     data = requests.get(f"https://www.zditm.szczecin.pl/api/v1/displays/{id}").json()
 
@@ -27,9 +32,11 @@ def get_stop_data(id: int):
             time = format_seconds((target - now).seconds)
         else: time = f"{time}min"
 
+        direction = fix_direction(dep["direction"])
+
         obj = {
             "line": dep["line_number"],
-            "direction": dep["direction"],
+            "direction": direction,
             "time": time,
             }
         departures.append(obj)

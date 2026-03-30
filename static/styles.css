@@ -1,30 +1,42 @@
 body {
-  margin: 0;
+  margin-inline: 2%;
   background: #0b0f14;
   color: #e8f1f2;
   font-family: "Inter", "Segoe UI", sans-serif;
   overflow: hidden;
+  display: flex;
+}
+
+#info_bar {
+  height: min-content;
+  width: 100%;
+  
+  font-size: 6vw;
+}
+
+#clock {
+  float: right;
+}
+.seconds {
+  font-size: 2vw;
+  color: dimgrey;
+}
+#weather {
+  font-variant-emoji: text;
 }
 
 /* container */
 #board {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 30px;
 
   height: 100vh;
+  width: 120%; /* not great */
   padding: 20px;
   box-sizing: border-box;
   white-space: nowrap;
-}
-
-/* TODO add class */
-hr {
-  align-self: center;
-  width: 95%;
-  border: 0.4vh solid white;
-  border-radius: 5px;
 }
 
 /* stop block */
@@ -37,17 +49,29 @@ hr {
   flex-direction: column;
 }
 
+/* TODO add class */
+hr {
+  align-self: center;
+  width: 95%;
+  border: 0.4vh solid white;
+  border-radius: 5px;
+}
+
 /* stop title */
 .stop_name {
-  font-size: 2.2vw;
+  font-size: 2.3vw;
   font-weight: 700;
   margin-bottom: 12px;
   color: #ffffff;
 }
 
+.line_cointaner {
+  width: 100%;
+}
+
 /* each departure row */
 .line {
-  font-weight: 500;
+  font-weight: 300;
   font-size: 1.8vw;
   padding: 4px 0;
 }
@@ -60,7 +84,7 @@ hr {
 
 /* time */
 .time {
-  align-self: right;
-  font-weight: 600;
+  float: right;
+  font-weight: 500;
   font-size: 1.8vw;
 }
